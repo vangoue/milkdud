@@ -1,0 +1,23 @@
+from random import *
+ 
+x = randint(1, 10) 
+print(x)
+guessestaken=0
+print("welcome to the guessing game")
+
+
+while guessestaken < 3:
+  usr=int(input("what is your number guess "))
+  guessestaken+=1
+  if x==usr:
+    print("congrats")
+    break
+  elif guessestaken>=3:
+    print ("you failed")
+  elif usr-x==1 or usr-x==-1:
+    print("hot")
+  elif  usr-x==2 or usr-x==-2:
+    print("warm")
+  elif  usr-x>2 or usr-x<-2:
+    print("cold")
+  
